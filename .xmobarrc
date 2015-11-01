@@ -1,0 +1,12 @@
+Config	{
+	-- appearance
+	 font		=	"Ricty:style=Regular"
+	,bgColor	=	"#000000" -- Black
+	,alpha		=	255 -- Set the transparency as opaque
+	,position	=	Top
+	,border		=	NoBorder -- No border around xmobar's window
+
+	-- layout
+	,sepChar	=	"%"
+	,alignSep	=	"}{" -- Separator between left-right alignment
+	}
