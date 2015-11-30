@@ -3,6 +3,9 @@
 # swap ctrl and capslock
 setxkbmap -option ctrl:swapcaps
 
+# set locale
+export LANG="ja_JP.UTF-8"
+
 # set wireless network connection (Now using wicd and connect automatically)
 # sudo wpa_supplicant -B -c /etc/wpa_supplicant/network_of_it_akumi.conf -i wlp3s0
 
