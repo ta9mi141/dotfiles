@@ -23,15 +23,11 @@ alias irb='irb --simple-prompt'
 PROMPT='%F{yellow}%n%f@%F{cyan}%m%f:$ '
 RPROMPT='%F{white}%d'
 
-# configuration of rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-
-# configuration of pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# configuration of anyenv
+if [ -d $HOME/.anyenv ] ; then
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"
+fi
 
 # set default editor
 export EDITOR="vim"
