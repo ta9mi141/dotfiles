@@ -36,3 +36,6 @@ export EDITOR="vim"
 setopt correct
 autoload -U compinit
 compinit
+
+# start archey3
+archey3
