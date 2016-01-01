@@ -104,7 +104,7 @@ if has('langmap') && exists('+langnoremap')
   set langnoremap
 endif
 
-"it_akumi added configuration after this line
+" it_akumi added configuration after this line
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -127,3 +127,12 @@ augroup BinaryXXD
     autocmd BufWritePost * if &binary | silent %!xxd -g 1
     autocmd BufWritePost * set nomod | endif
 augroup END
+
+" config of NeoBundle
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin()
+NeoBundle 'Shougo/vinarise'
+call neobundle#end()
+filetype plugin indent on
