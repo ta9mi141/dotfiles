@@ -129,11 +129,17 @@ augroup BinaryXXD
     autocmd BufWritePost * set nomod | endif
 augroup END
 
+" Read *.md as markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " config of NeoBundle
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin()
 NeoBundle 'Shougo/vinarise'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 call neobundle#end()
 filetype plugin indent on
