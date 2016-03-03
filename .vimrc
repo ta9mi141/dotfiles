@@ -72,4 +72,5 @@ NeoBundleCheck
 
 
 " --- Set colorscheme ---
+colorscheme jellybeans
 syntax on  " Set syntax highlight
