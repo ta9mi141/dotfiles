@@ -11,7 +11,6 @@ set backspace=indent,eol,start
 
 
 
-
 " ==== My config ====
 
 " --- Basic config ---
