@@ -13,7 +13,6 @@ set backspace=indent,eol,start
 
 " --- Basic config ---
 set number " Indicate number of lines
-syntax on  " Set syntax highlight
 set clipboard=unnamedplus " Set clipboard
 
 
@@ -51,6 +50,10 @@ augroup BinaryXXD
 augroup END
 
 
+" --- Read *.md as markdown ---
+au BufRead,BufNewFile *.md set filetype=markdown
+
+
 " --- config of NeoBundle ---
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -59,7 +62,14 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vinarise'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
+
+
+" --- Set colorscheme ---
+syntax on  " Set syntax highlight
