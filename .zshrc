@@ -42,3 +42,6 @@ compinit
 
 # start archey3
 archey3
+
+# 256 colors setup for console Vim
+export TERM=xterm-256color
