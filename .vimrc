@@ -7,8 +7,6 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" =================================================
-
 
 
 " ==== My config ====
@@ -17,19 +15,16 @@ set backspace=indent,eol,start
 set number " Indicate number of lines
 syntax on  " Set syntax highlight
 set clipboard=unnamedplus " Set clipboard
-" --------------------
 
 
 " --- Search setting ---
 set hlsearch " highlight search phrase
 set incsearch
-" ----------------------
 
 
 " --- Make invisible character visible ---
 set list
 set listchars=tab:>-
-" ----------------------------------------
 
 
 " --- Expand tab as 4 space ---
@@ -37,12 +32,10 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-" -----------------------------
 
 
 " --- Set statusline ---
 set laststatus=2
-" ----------------------
 
 
 " --- Binary edit mode ---
@@ -56,7 +49,6 @@ augroup BinaryXXD
     autocmd BufWritePost * if &bin | silent %!xxd -g 1
     autocmd BufWritePost * set nomod | endif
 augroup END
-" ------------------------
 
 
 " --- config of NeoBundle ---
@@ -71,6 +63,3 @@ NeoBundle 'Shougo/vinarise'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-" ---------------------------
-
-" ===================
