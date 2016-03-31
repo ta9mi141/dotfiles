@@ -9,4 +9,4 @@ ln -si ~/dotfiles/.xmobarrc ~/.xmobarrc
 ln -si ~/dotfiles/.fehbg ~/.fehbg
 ln -si ~/dotfiles/.terminator/config ~/.config/terminator/config
 ln -si ~/dotfiles/.stalonetrayrc ~/.stalonetrayrc
-ln -si ~/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -si ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
