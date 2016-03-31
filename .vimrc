@@ -50,10 +50,6 @@ augroup BinaryXXD
 augroup END
 
 
-" --- Read *.md as markdown ---
-au BufRead,BufNewFile *.md set filetype=markdown
-
-
 " --- config of NeoBundle ---
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/

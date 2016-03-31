@@ -46,10 +46,6 @@ augroup BinaryXXD
 augroup END
 
 
-" --- Read *.md as markdown ---
-au BufRead,BufNewFile *.md set filetype=markdown
-
-
 " --- Set colorscheme ---
 colorscheme jellybeans
 syntax on  " Set syntax highlight
