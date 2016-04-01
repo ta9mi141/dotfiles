@@ -49,3 +49,7 @@ augroup END
 " --- Set colorscheme ---
 colorscheme jellybeans
 syntax on  " Set syntax highlight
+
+
+" --- Use plugin and indent ---
+filetype plugin indent on
