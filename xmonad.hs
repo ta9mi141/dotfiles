@@ -12,7 +12,7 @@ main = xmonad =<< xmobar defaultConfig
         }
 
 myTerminal              =   "terminator"
-myModMask               =   mod4Mask	-- Super
+myModMask               =   mod4Mask    -- Super
 myBorderWidth           =   2
 myNormalBorderColor     =   "#000000" --Black
 myFocusedBorderColor    =   "#ffff00" --Yellow
