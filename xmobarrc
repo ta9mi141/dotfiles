@@ -10,7 +10,8 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %date% || %kbd% "
+   , template = "%battery% | %memory% | %dynnetwork% }{ %date% || %kbd% "
+   -- , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %date% || %kbd% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -46,22 +47,22 @@ Config {
                              ] 10
 
         -- cpu activity monitor
-        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"
-                             , "--Low"      , "50"         -- units: %
-                             , "--High"     , "85"         -- units: %
-                             , "--low"      , "green"
-                             , "--normal"   , "yellow"
-                             , "--high"     , "red"
-                             ] 10
+        -- , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"
+        --                      , "--Low"      , "50"         -- units: %
+        --                      , "--High"     , "85"         -- units: %
+        --                      , "--low"      , "green"
+        --                      , "--normal"   , "yellow"
+        --                      , "--high"     , "red"
+        --                      ] 10
 
         -- cpu core temperature monitor
-        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"
-                             , "--Low"      , "70"        -- units: °C
-                             , "--High"     , "80"        -- units: °C
-                             , "--low"      , "green"
-                             , "--normal"   , "yellow"
-                             , "--high"     , "red"
-                             ] 50
+        -- , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"
+        --                      , "--Low"      , "70"        -- units: °C
+        --                      , "--High"     , "80"        -- units: °C
+        --                      , "--low"      , "green"
+        --                      , "--normal"   , "yellow"
+        --                      , "--high"     , "red"
+        --                      ] 50
 
         -- memory usage monitor
         , Run Memory         [ "--template" ,"Mem: <usedratio>%"
