@@ -8,7 +8,6 @@ ln -si $HOME/dotfiles/zshrc $HOME/.zshrc
 ln -si $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
 ln -si $HOME/dotfiles/xmobarrc $HOME/.xmobarrc
 ln -si $HOME/dotfiles/stalonetrayrc $HOME/.stalonetrayrc
-ln -si $HOME/dotfiles/conkyrc $HOME/.conkyrc
 
 if [ ! -e $HOME/.config/nvim ]; then
     ln -si $HOME/dotfiles/nvim/ $HOME/.config/nvim
