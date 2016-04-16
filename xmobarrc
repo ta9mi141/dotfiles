@@ -10,7 +10,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% }{ %battery% | %memory% | %dynnetwork% | %date% | %kbd% "
+   , template = "%StdinReader% }{ %battery%   %memory%   %dynnetwork%   %date% "
    -- , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %date% || %kbd% "
 
    -- general behavior
@@ -38,7 +38,7 @@ Config {
    , commands =
 
         -- network activity monitor (dynamic interface resolution)
-        [ Run DynNetwork     [ "--template" , "<dev>: t:<tx>kB/s r:<rx>kB/s"
+        [ Run DynNetwork     [ "--template" , "<icon=/home/it_akumi/.icons/sm4tik-icon-pack/xbm/wifi_02.xbm/> <dev>: <icon=/home/it_akumi/.icons/sm4tik-icon-pack/xbm/net_up_02.xbm/> <tx>kB/s <icon=/home/it_akumi/.icons/sm4tik-icon-pack/xbm/net_down_02.xbm/> <rx>kB/s"
                              , "--Low"      , "1000"       -- units: kB/s
                              , "--High"     , "5000"       -- units: kB/s
                              , "--low"      , "green"
@@ -65,7 +65,7 @@ Config {
         --                      ] 50
 
         -- memory usage monitor
-        , Run Memory         [ "--template" ,"Mem: <usedratio>%"
+        , Run Memory         [ "--template" ,"<icon=/home/it_akumi/.icons/sm4tik-icon-pack/xbm/mem.xbm/> <usedratio>%"
                              , "--Low"      , "20"        -- units: %
                              , "--High"     , "90"        -- units: %
                              , "--low"      , "green"
@@ -74,7 +74,7 @@ Config {
                              ] 10
 
         -- battery monitor
-        , Run Battery        [ "--template" , "Batt: <acstatus>"
+        , Run Battery        [ "--template" , "<icon=/home/it_akumi/.icons/sm4tik-icon-pack/xbm/bat_full_02.xbm/> <acstatus>"
                              , "--Low"      , "20"        -- units: %
                              , "--High"     , "80"        -- units: %
                              , "--low"      , "red"
@@ -92,12 +92,12 @@ Config {
 
         -- time and date indicator
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
-        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+        , Run Date           "<fc=#ff8c00>%F (%a) %T</fc>" "date" 10
 
         -- keyboard layout indicator
-        , Run Kbd            [ ("us(dvorak)" , "<fc=#0000ff>DV</fc>")
-                             , ("us"         , "<fc=#ff0000>US</fc>")
-                             ]
+        -- , Run Kbd            [ ("us(dvorak)" , "<fc=#0000ff>DV</fc>")
+        --                      , ("us"         , "<fc=#ff0000>US</fc>")
+        --                      ]
 
         -- display workspace indicator
         , Run StdinReader
