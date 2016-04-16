@@ -10,7 +10,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %memory% | %dynnetwork% }{ %date% || %kbd% "
+   , template = "%StdinReader% | %battery% | %memory% | %dynnetwork% }{ %date% || %kbd% "
    -- , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %date% || %kbd% "
 
    -- general behavior
@@ -98,5 +98,8 @@ Config {
         , Run Kbd            [ ("us(dvorak)" , "<fc=#0000ff>DV</fc>")
                              , ("us"         , "<fc=#ff0000>US</fc>")
                              ]
+
+        -- display workspace indicator
+        , Run StdinReader
         ]
 }
