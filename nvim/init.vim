@@ -51,5 +51,17 @@ colorscheme jellybeans
 syntax on  " Set syntax highlight
 
 
-" --- Use plugin and indent ---
+" --- Config for dein.vim ---
+if &compatible
+    set nocompatible
+endif
+set runtimepath^=~/.config/nvim/repos/github.com/Shougo/dein.vim
+
+call dein#begin(expand('~/.cache/dein'))
+
+call dein#add('~/.config/nvim/repos/github.com/Shougo/dein.vim')
+call dein#add('Shougo/neocomplete.vim')
+
+call dein#end()
+
 filetype plugin indent on
