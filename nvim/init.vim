@@ -59,8 +59,10 @@ set runtimepath^=~/.config/nvim/repos/github.com/Shougo/dein.vim
 
 call dein#begin(expand('~/.cache/dein'))
 
-call dein#add('~/.config/nvim/repos/github.com/Shougo/dein.vim')
+call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neocomplete.vim')
+call dein#add('kannokanno/previm')
+call dein#add('tyru/open-browser.vim')
 
 call dein#end()
 
