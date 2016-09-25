@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Config
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.SetWMName
 
@@ -10,8 +11,8 @@ main = xmonad =<< xmobar defaultConfig
         , focusedBorderColor=   myFocusedBorderColor
         , startupHook       =   setWMName "LG3D"
         , handleEventHook   =   mconcat
-                                [ docksEventHook
-                                , handleEventHook defaultconfig]
+                                [ -- docksEventHook
+                                  handleEventHook defaultConfig]
         }
 
 myTerminal              =   "terminator"
