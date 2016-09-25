@@ -11,8 +11,8 @@ main = xmonad =<< xmobar defaultConfig
         , focusedBorderColor=   myFocusedBorderColor
         , startupHook       =   setWMName "LG3D"
         , handleEventHook   =   mconcat
-                                [ -- docksEventHook
-                                  handleEventHook defaultConfig]
+                                [ docksEventHook
+                                , handleEventHook defaultConfig]
         }
 
 myTerminal              =   "terminator"
