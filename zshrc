@@ -29,9 +29,6 @@ if [ -d $HOME/.anyenv ] ; then
     eval "$(anyenv init -)"
 fi
 
-# configuration of direnv
-eval "$(direnv hook zsh)"
-
 # set default editor
 export EDITOR="vim"
 
