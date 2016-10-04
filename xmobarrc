@@ -76,7 +76,7 @@ Config {
         -- battery monitor
         , Run Battery        [ "--template" , "<icon=/home/it_akumi/.icons/sm4tik-icon-pack/xbm/bat_full_02.xbm/> <acstatus>"
                              , "--Low"      , "20"        -- units: %
-                             , "--High"     , "80"        -- units: %
+                             , "--High"     , "69"        -- units: %
                              , "--low"      , "red"
                              , "--normal"   , "yellow"
                              , "--high"     , "green"
