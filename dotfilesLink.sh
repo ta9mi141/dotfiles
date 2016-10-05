@@ -5,9 +5,13 @@ ln -si $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ln -si $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -si $HOME/dotfiles/xinitrc $HOME/.xinitrc
 ln -si $HOME/dotfiles/zshrc $HOME/.zshrc
-ln -si $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
 ln -si $HOME/dotfiles/xmobarrc $HOME/.xmobarrc
 ln -si $HOME/dotfiles/stalonetrayrc $HOME/.stalonetrayrc
+
+if [ ! -e $HOME/.xmonad ]; then
+    mkdir $HOME/.xmonad
+    ln -si $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
+fi
 
 if [ ! -e $HOME/.config/nvim ]; then
     ln -si $HOME/dotfiles/nvim/ $HOME/.config/nvim
