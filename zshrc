@@ -1,7 +1,7 @@
 # Created by it_akumi for 5.0.7
 
 # swap ctrl and capslock
-setxkbmap -option ctrl:swapcaps
+setxkbmap -option ctrl:nocaps
 
 # set locale
 export LANG="ja_JP.UTF-8"
