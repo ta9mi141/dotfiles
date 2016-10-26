@@ -12,6 +12,10 @@ set number " Indicate number of lines
 set clipboard+=unnamedplus " Set clipboard
 
 
+" --- Highlight editing line ---
+set cursorline
+
+
 " --- Search setting ---
 set hlsearch " highlight search phrase
 set incsearch

@@ -21,6 +21,10 @@ set hlsearch " highlight search phrase
 set incsearch
 
 
+" --- Highlight editing line ---
+set cursorline
+
+
 " --- Make invisible character visible ---
 set list
 set listchars=tab:>-
