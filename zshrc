@@ -18,6 +18,8 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
 alias irb='irb --simple-prompt'
+alias vi='nvim'
+alias vim='nvim'
 
 # set prompt
 PROMPT='%F{yellow}%n%f@%F{cyan}%m%f:$ '
