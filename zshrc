@@ -19,6 +19,12 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias irb='irb --simple-prompt'
 
+# Add aliases if nvim is installed
+if [ -e /usr/bin/nvim ] ; then
+    alias vi='nvim'
+    alias vim='nvim'
+fi
+
 # set prompt
 PROMPT='%F{yellow}%n%f@%F{cyan}%m%f:$ '
 RPROMPT='%F{white}%d'
