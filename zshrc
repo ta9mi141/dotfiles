@@ -18,6 +18,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
 alias irb='irb --simple-prompt'
+alias e='emacs'
 
 # Add aliases if nvim is installed
 if [ -e /usr/bin/nvim ] ; then
