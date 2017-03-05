@@ -22,3 +22,13 @@ fi
 if [ ! -e $HOME/.config/terminator ]; then
     ln -si $HOME/dotfiles/terminator/ $HOME/.config/terminator
 fi
+
+
+# Set systemd services
+if [ ! -e $HOME/.config/systemd/user ]; then
+    mkdir -p $HOME/.config/systemd/user
+fi
+
+for service in $HOME/dotfiles/systemd/user/*.service; do
+    ln -si $service $HOME/.config/systemd/user/
+done
