@@ -22,6 +22,9 @@ export QT_IM_MODULE='uim'
 uim-xim &
 export XMODIFIERS='@im=uim'
 
+# start xscreensaver
+xscreensaver -no-splash &
+
 # start XMonad
 set the cursor
 xsetroot -cursor_name left_ptr
