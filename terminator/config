@@ -1,5 +1,7 @@
 [global_config]
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_font = Ricty 12
+  title_use_system_font = False
 [keybindings]
 [layouts]
   [[default]]
