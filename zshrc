@@ -18,7 +18,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
 alias irb='irb --simple-prompt'
-alias e='emacsclient'
+alias e='emacsclient -nw'
 alias ekill='emacsclient -eval "(kill-emacs)"'
 
 # Add aliases if nvim is installed
