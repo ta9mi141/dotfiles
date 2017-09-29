@@ -85,7 +85,7 @@ if [ -d $HOME/.anyenv ] ; then
 fi
 
 # Use capslock as ctrl
-# setxkbmap -option ctrl:nocaps
+setxkbmap -option ctrl:nocaps
 
 # Locale
 export LANG="ja_JP.UTF-8"
