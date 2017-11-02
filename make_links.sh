@@ -9,7 +9,7 @@ ln -si $HOME/dotfiles/xmobarrc $HOME/.xmobarrc
 ln -si $HOME/dotfiles/stalonetrayrc $HOME/.stalonetrayrc
 ln -si $HOME/dotfiles/xscreensaver $HOME/.xscreensaver
 ln -si $HOME/dotfiles/spacemacs $HOME/.spacemacs
-ln -si $HOME/dotfiles/flake8 $HOME/.flake8
+ln -si $HOME/dotfiles/flake8 $HOME/.config/flake8
 
 if [ ! -e $HOME/.xmonad ]; then
     mkdir $HOME/.xmonad
