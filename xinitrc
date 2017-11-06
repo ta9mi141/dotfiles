@@ -30,4 +30,5 @@ set the cursor
 xsetroot -cursor_name left_ptr
 set wallpaper
 sh  ~/.fehbg &
+compton -b
 exec xmonad
