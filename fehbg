@@ -1,2 +1,2 @@
 #!/bin/sh
-exec 'feh' '--bg-scale' '/home/it_akumi/Desktop/images/1920x1080_archlinux_leopard-1240352.jpg' 
+'feh' '--bg-scale' '/home/it_akumi/Desktop/images/1920x1080_archlinux_leopard-1240352.jpg'

@@ -24,6 +24,10 @@ if [ ! -e $HOME/.config/terminator ]; then
     ln -si $HOME/dotfiles/terminator/ $HOME/.config/terminator
 fi
 
+if [ ! -e $HOME/.config/compton ]; then
+    ln -si $HOME/dotfiles/compton/ $HOME/.config/compton
+fi
+
 
 # Set systemd services
 if [ ! -e $HOME/.config/systemd/user ]; then
