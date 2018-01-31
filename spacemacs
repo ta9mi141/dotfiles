@@ -321,8 +321,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
-  "Use environment variables of shell"
-  (exec-path-from-shell-copy-envs '("PATH", "GOROOT", "GOPATH"))
   "Set default browser to /usr/bin/google-chrome-stable"
   (setq browse-url-browser-function 'browse-url-generic
         browse-url-generic-program "/usr/bin/google-chrome-stable")
@@ -356,6 +354,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
     )
   (evil-leader/set-key "o y" 'copy-to-clipboard)
   (evil-leader/set-key "o p" 'paste-from-clipboard)
+
+  "Use environment variables of shell"
+  (exec-path-from-shell-copy-envs '("PATH", "GOROOT", "GOPATH"))
 
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
