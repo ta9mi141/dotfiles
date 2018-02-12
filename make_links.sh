@@ -1,5 +1,4 @@
 #!/bin/sh
-ln -si $HOME/dotfiles/asoundrc $HOME/.asoundrc
 ln -si $HOME/dotfiles/fehbg $HOME/.fehbg
 ln -si $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ln -si $HOME/dotfiles/vimrc $HOME/.vimrc
