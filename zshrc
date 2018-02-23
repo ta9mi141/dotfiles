@@ -9,6 +9,7 @@ bindkey -v
 zmodload zsh/complist
 bindkey -M viins '^N' down-line-or-history
 bindkey -M viins '^P' up-line-or-history
+bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
