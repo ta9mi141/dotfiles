@@ -14,10 +14,6 @@ if [ ! -e $HOME/.xmonad ]; then
     ln -si $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
 fi
 
-if [ ! -e $HOME/.config/nvim ]; then
-    ln -si $HOME/dotfiles/nvim/ $HOME/.config/nvim
-fi
-
 if [ ! -e $HOME/.config/terminator ]; then
     ln -si $HOME/dotfiles/terminator/ $HOME/.config/terminator
 fi

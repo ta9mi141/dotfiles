@@ -47,10 +47,6 @@ alias rm='rm -i'
 alias irb='irb --simple-prompt'
 alias e='emacsclient -nw'
 alias ekill='emacsclient -eval "(kill-emacs)"'
-if [ -e /usr/bin/nvim ]; then
-    alias vi='nvim'
-    alias vim='nvim'
-fi
 
 ##############################
 # Completion
