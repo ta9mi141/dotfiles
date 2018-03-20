@@ -82,8 +82,8 @@ if [ -d $HOME/.anyenv ] ; then
     eval "$(anyenv init -)"
 fi
 
-# Go config
-export GOPATH="$HOME/.go"
+# Config of Go
+export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Use capslock as ctrl
