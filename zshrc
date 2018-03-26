@@ -83,7 +83,7 @@ if [ -d $HOME/.anyenv ] ; then
 fi
 
 # Config of Go
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/works/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Use capslock as ctrl
