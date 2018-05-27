@@ -338,6 +338,12 @@ before packages are loaded. If you are unsure, you should try in setting them in
    )
   (add-hook 'web-mode-hook 'web-mode-hook)
 
+  (defun css-mode-hook ()
+    "Hooks for css-mode"
+    (setq css-indent-offset 2)
+    )
+  (add-hook 'css-mode-hook 'css-mode-hook)
+
   (defun copy-to-clipboard ()
     "Copies selection to x-clipboard"
     (interactive)
