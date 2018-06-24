@@ -65,9 +65,6 @@ values."
      ;; source-controll
      git
 
-     ;; tools
-     pandoc
-
      ;; emacs
      org
 
