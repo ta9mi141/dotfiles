@@ -68,30 +68,3 @@ setopt pushd_ignore_dups
 ##############################
 # Others
 ##############################
-
-# Connect to wireless network manually
-# sudo wpa_supplicant -B -c /etc/wpa_supplicant/network_of_it_akumi.conf -i wlp3s0
-
-# Display basic system info
-if [ -e /etc/arch-release ]; then
-    archey3
-fi
-
-# Anyenv config
-if [ -d $HOME/.anyenv ] ; then
-    export PATH="$HOME/.anyenv/bin:$PATH"
-    eval "$(anyenv init -)"
-fi
-
-# Config of Go
-export GOPATH="$HOME/works/go"
-export PATH="$GOPATH/bin:$PATH"
-
-# Use capslock as ctrl
-setxkbmap -option ctrl:nocaps
-
-# Locale
-export LANG="ja_JP.UTF-8"
-
-# 256 colors setup for console Vim
-export TERM=xterm-256color
