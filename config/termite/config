@@ -56,22 +56,36 @@ background = rgba(0, 0, 0, 0.75)
 highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+
+# crimson
+color1 = #dc143c
+# limegreen
+color2 = #32cd32
+# gold
+color3 = #ffd700
+# steelblue
+color4 = #4682b4
+# violet
+color5 = #ee82ee
+# turquoise
+color6 = #40e0d0
+# lightgrey
+color7 = #d3d3d3
+# tomato
+color9 = #ff6347
+# yellowgreen
+color10 = #9acd32
+# darkorange
+color11 = #ff8c00
+# lightskyblue
+color12 = #87cefa
+# mediumturquoise
+color14 = #48d1cc
+
+# color0 = #3f3f3f black
+# color8 = #709080 black bold
+# color13 = #ec93d3 magenta bold
+# color15 = #ffffff white bold
 
 [hints]
 #font = Monospace 9
