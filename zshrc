@@ -4,7 +4,6 @@
 # Keybinding
 ##############################
 
-export EDITOR="vim"
 bindkey -v
 zmodload zsh/complist
 bindkey -M viins '^A' beginning-of-line
@@ -68,3 +67,8 @@ setopt pushd_ignore_dups
 ##############################
 # Others
 ##############################
+
+# Print basic system information
+if [ -e /etc/arch-release ]; then
+    archey3
+fi
