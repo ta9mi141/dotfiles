@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 
 # Copy configs directly under $HOME
