@@ -186,6 +186,7 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
+    status_command while ~/.config/sway/status_command.sh; do sleep 1; done;
     font Ricty:style=Regular 18
     colors {
         statusline #ffffff
