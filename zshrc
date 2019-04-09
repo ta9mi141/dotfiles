@@ -46,7 +46,7 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias irb='irb --simple-prompt'
 alias e='emacsclient -nw'
-alias ekill='emacsclient -eval "(kill-emacs)"'
+alias ekill='emacsclient -e "(kill-emacs)"'
 
 ##############################
 # Completion
