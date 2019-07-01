@@ -44,7 +44,6 @@ values."
      ;; distributions
 
      ;; emacs
-     org
 
      ;; email
 
