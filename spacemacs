@@ -31,52 +31,64 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+     ;; chat
 
-     ;; lang
-     c-c++
-     emacs-lisp
-     go
-     (go :variables
-         go-tab-width 4
-         go-use-gometalinter t
-         gofmt-command "goimports")
-     haskell
-     html
-     javascript
-     markdown
-     python
-     ruby
-     rust
-     shell-scripts
-     sql
-     vimscript
-     yaml
-
-     ;; frameworks
-     ruby-on-rails
+     ;; checkers
+     syntax-checking
+     spell-checking
 
      ;; completion
-     helm
+     ivy
      auto-completion
 
-     ;; source-controll
-     git
+     ;; distributions
 
      ;; emacs
      org
 
-     ;; better-defaults
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     ;; email
+
+     ;; frameworks
+
+     ;; fun
+
+     ;; intl
+
+     ;; lang
+     c-c++
+     emacs-lisp
+     (go :variables
+         go-tab-width 4
+         go-use-gometalinter t
+         gofmt-command "goimports")
+     markdown
+
+     ;; misc/nlinum
+
+     ;; os
+
+     ;; pair-programming/floobits
+
+     ;; source-control
+     git
+     version-control
+
+     ;; spacemacs
+
+     ;; tags
+
+     ;; themes
+
+     ;; tools
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            shell-default-term-shell "/bin/zsh")
+
+     ;; vim
+
+     ;; web-services
+
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -274,8 +286,18 @@ values."
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
    dotspacemacs-smooth-scrolling t
-   ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
-   ;; derivatives. If set to `relative', also turns on relative line numbers.
+   ;; Control line numbers activation.
+   ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
+   ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
+   ;; This variable can also be set to a property list for finer control:
+   ;; '(:relative nil
+   ;;   :disabled-for-modes dired-mode
+   ;;                       doc-view-mode
+   ;;                       markdown-mode
+   ;;                       org-mode
+   ;;                       pdf-view-mode
+   ;;                       text-mode
+   ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
@@ -328,27 +350,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  "Highlight current line"
-  (global-hl-line-mode 1)
-
   "Set hl-line color"
   (set-face-background 'hl-line "#2b2b2b")
-
-  "Set default browser to /usr/bin/google-chrome-stable"
-  (setq browse-url-browser-function 'browse-url-generic
-        browse-url-generic-program "/usr/bin/google-chrome-stable")
-
-  (defun web-mode-hook ()
-    "Hooks for web-mode"
-    (setq web-mode-markup-indent-offset 2)
-   )
-  (add-hook 'web-mode-hook 'web-mode-hook)
-
-  (defun css-mode-hook ()
-    "Hooks for css-mode"
-    (setq css-indent-offset 2)
-    )
-  (add-hook 'css-mode-hook 'css-mode-hook)
 
   (defun copy-to-clipboard ()
     "Copies selection to x-clipboard"
@@ -379,9 +382,6 @@ you should place your code here."
     )
   (evil-leader/set-key "o y" 'copy-to-clipboard)
   (evil-leader/set-key "o p" 'paste-from-clipboard)
-
-  "Use environment variables of shell"
-  (exec-path-from-shell-copy-envs '("PATH", "GOROOT", "GOPATH"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -391,13 +391,14 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(evil-want-Y-yank-to-eol nil)
+ '(ansi-color-names-vector
+   ["#080808" "#d70000" "#67b11d" "#875f00" "#268bd2" "#af00df" "#00ffff" "#b2b2b2"])
  '(package-selected-packages
    (quote
-    (sql-indent 0blayout jbeans-theme toml-mode racer pos-tip cargo rust-mode winum org-category-capture org-mime fuzzy ghub let-alist go-guru go-eldoc company-go go-mode disaster company-c-headers cmake-mode clang-format insert-shebang fish-mode company-shell intero flycheck hlint-refactor hindent helm-hoogle haskell-snippets company-ghci company-ghc ghc haskell-mode company-cabal cmm-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data yaml-mode vimrc-mode dactyl-mode projectile-rails inflections feature-mode pandoc-mode ox-pandoc ht org-projectile org-present org-pomodoro alert log4e gntp org-download htmlize gnuplot smeargle rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake orgit org minitest magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor chruby bundler inf-ruby mmm-mode markdown-toc markdown-mode gh-md helm-company helm-c-yasnippet company-statistics company-anaconda company auto-yasnippet yasnippet ac-ispell auto-complete yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode anaconda-mode pythonic ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme))))
+    (git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter flyspell-correct-ivy flyspell-correct diff-hl auto-dictionary xterm-color shell-pop multi-term flycheck-gometalinter eshell-z eshell-prompt-extras esh-help disaster company-go company-c-headers cmake-mode clang-format smeargle orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup htmlize gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit transient git-commit with-editor fuzzy flycheck-pos-tip pos-tip flycheck company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete go-guru go-eldoc go-mode ws-butler winum which-key wgrep volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline smex restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint ivy-hydra indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-make google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump popup f dash s diminish define-word counsel-projectile projectile pkg-info epl counsel swiper ivy column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed async aggressive-indent adaptive-wrap ace-window ace-link avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((((class color) (min-colors 89)) (:foreground "#cccccc" :background "#151515")))))
+ )
