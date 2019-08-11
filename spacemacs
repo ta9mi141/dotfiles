@@ -360,6 +360,18 @@ you should place your code here."
   "Set hl-line color"
   (set-face-background 'hl-line "#2b2b2b")
 
+  (defun my-web-mode-hook ()
+    (setq web-mode-markup-indent-offset 2)
+    (setq web-mode-css-indent-offset 2)
+    (setq web-mode-code-indent-offset 2)
+    )
+  (add-hook 'web-mode-hook 'my-web-mode-hook)
+
+  (defun my-css-mode-hook ()
+    (setq css-indent-offset 2)
+    )
+  (add-hook 'css-mode-hook 'my-css-mode-hook)
+
   (defun copy-to-clipboard ()
     "Copies selection to x-clipboard"
     (interactive)
