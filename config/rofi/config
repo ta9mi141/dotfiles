@@ -1,0 +1,9 @@
+# Remove a binding matching "Control+k"
+rofi.kb-remove-to-eol: Control+p
+rofi.kb-row-up: Control+k
+
+# Remove a binding matching "Control+j"
+rofi.kb-accept-entry: Control+m,Return,KP_Enter
+rofi.kb-row-down: Control+j
+
+rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
