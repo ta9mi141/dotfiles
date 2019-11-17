@@ -24,7 +24,8 @@ HISTSIZE=500000 # The number of histories saved to memory
 SAVEHIST=500000 # The number of histories saved to HISTFILE
 setopt extended_history # Save history with timestamp (UNIX time) and execution time
 setopt hist_ignore_dups
-unsetopt sharehistory # Share history with other terminals
+setopt inc_append_history
+setopt share_history # Share history with other terminals
 
 ##############################
 # Prompt
