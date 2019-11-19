@@ -9,7 +9,6 @@ zmodload zsh/complist
 bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^N' down-line-or-history
 bindkey -M viins '^P' up-line-or-history
-bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -26,6 +25,15 @@ setopt extended_history # Save history with timestamp (UNIX time) and execution 
 setopt hist_ignore_dups
 setopt inc_append_history
 setopt share_history # Share history with other terminals
+
+function peco-history-incremental-search {
+    BUFFER=`history -nr 1 | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle accept-line
+    zle redisplay
+}
+zle -N peco-history-incremental-search
+bindkey -M viins '^R' peco-history-incremental-search
 
 ##############################
 # Prompt
