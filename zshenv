@@ -10,3 +10,4 @@ export GOPATH="$HOME/works/go"
 typeset -U PATH
 export PATH="$HOME/.local/bin:$GOPATH/bin:$PATH"
 systemctl --user import-environment PATH
+systemctl --user import-environment GOPATH
