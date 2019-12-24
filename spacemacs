@@ -66,6 +66,7 @@ This function should only modify configuration layer settings."
          go-backend 'lsp
          go-tab-width 4
          go-use-gometalinter t
+         go-format-before-save t
          gofmt-command "goimports")
      html
      (javascript :variables
