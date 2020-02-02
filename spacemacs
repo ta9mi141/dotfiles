@@ -60,7 +60,8 @@ This function should only modify configuration layer settings."
      ;; intl
 
      ;; lang
-     c-c++
+     (c-c++ :variables
+            c-c++-enable-clang-format-on-save t)
      emacs-lisp
      (go :variables
          go-backend 'lsp
