@@ -101,7 +101,8 @@ This function should only modify configuration layer settings."
      ;; themes
 
      ;; tools
-     lsp
+     (lsp :variables
+          lsp-ui-doc-position 'top)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
