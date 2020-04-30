@@ -266,7 +266,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; Default font or prioritized list of fonts.
-   dotspacemacs-default-font '("Ricty:style=Regular"
+   dotspacemacs-default-font '("Ricty"
                                :size 18
                                :weight normal
                                :width normal
@@ -529,8 +529,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  "Set hl-line color"
   (set-face-background 'hl-line "#2b2b2b")
+  (set-face-attribute 'fixed-pitch nil :family "Ricty")
 
   (defun my-web-mode-hook ()
     (setq web-mode-markup-indent-offset 2)
