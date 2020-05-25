@@ -70,6 +70,8 @@ This function should only modify configuration layer settings."
          go-format-before-save t
          gofmt-command "goimports")
      html
+     (java :variables
+           java-backend 'lsp)
      (javascript :variables
                  javascript-backend 'lsp)
      markdown
