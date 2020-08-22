@@ -172,4 +172,7 @@ bar {
     swaybar_command waybar
 }
 
+### Other configurations
+exec fcitx-autostart
+
 include /etc/sway/config.d/*
