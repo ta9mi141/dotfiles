@@ -18,6 +18,7 @@ set $wallpaper /home/it_akumi/Desktop/images/1920x1080_archlinux_leopard-1240352
 
 ### Output configuration
 output * bg $wallpaper fill
+output HDMI-A-1 transform 270
 
 ### Idle configuration
 exec swayidle -w \
