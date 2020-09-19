@@ -15,6 +15,7 @@ set $right l
 set $term /usr/bin/termite
 set $launcher /usr/bin/rofi -show run
 set $wallpaper /home/it_akumi/Desktop/images/1920x1080_archlinux_leopard-1240352.jpg
+set $screenlock /usr/bin/swaylock -f -i $wallpaper
 
 ### Output configuration
 output * bg $wallpaper fill
@@ -22,10 +23,10 @@ output HDMI-A-1 transform 270
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -i $wallpaper' \
+         timeout 300 '$screenlock' \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -i $wallpaper'
+         before-sleep '$screenlock'
 
 ### Key bindings
 #
@@ -39,6 +40,9 @@ exec swayidle -w \
 
     # start your launcher
     bindsym $mod+d exec $launcher
+
+    # lock screen
+    bindsym $mod+Shift+x exec $screenlock
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
