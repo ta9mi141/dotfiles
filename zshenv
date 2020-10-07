@@ -1,4 +1,4 @@
-# Created by it_akumi
+# Created by ta9mi1shi1
 
 ##############################
 # Environment variables
