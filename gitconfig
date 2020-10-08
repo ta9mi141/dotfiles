@@ -1,9 +1,12 @@
 [user]
-	name = Takumi Ishii
-	email = ta9mi1shi1@gmail.com
+    name = Takumi Ishii
+    email = ta9mi1shi1@gmail.com
 [color]
-	ui = auto
+    ui = auto
 [core]
-	editor = vim
+    editor = vim
 [pull]
-	rebase = false
+    rebase = false
+[alias]
+    s = status
+    d = diff

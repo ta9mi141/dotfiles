@@ -49,16 +49,13 @@ RPROMPT='%F{white}%d%f'
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
-alias lcf='ls -CF'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
-alias irb='irb --simple-prompt'
 alias e='emacsclient -c'
 alias en='emacsclient -nw'
 alias ekill='emacsclient -e "(kill-emacs)"'
-alias k='kubectl'
-alias ksec='kubesec'
+alias clear='clear -x'
 
 ##############################
 # Completion
