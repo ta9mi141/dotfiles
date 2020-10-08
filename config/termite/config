@@ -57,14 +57,14 @@ highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
 
-# crimson
-color1 = #dc143c
+# orangered
+color1 = #ff4500
 # limegreen
 color2 = #32cd32
 # gold
 color3 = #ffd700
-# steelblue
-color4 = #4682b4
+# lightskyblue
+color4 = #87c3fa
 # violet
 color5 = #ee82ee
 # turquoise
@@ -75,8 +75,8 @@ color7 = #d3d3d3
 color9 = #ff6347
 # yellowgreen
 color10 = #9acd32
-# darkorange
-color11 = #ff8c00
+# goldenrod
+color11 = #daa520
 # lightskyblue
 color12 = #87cefa
 # mediumturquoise
