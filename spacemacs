@@ -75,6 +75,7 @@ This function should only modify configuration layer settings."
      (javascript :variables
                  javascript-backend 'lsp)
      markdown
+     ruby
      rust
      sql
      (typescript :variables
