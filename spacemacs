@@ -75,6 +75,10 @@ This function should only modify configuration layer settings."
      (javascript :variables
                  javascript-backend 'lsp)
      markdown
+     (python :variables
+             python-backend 'lsp
+             python-formatter 'lsp
+             python-format-on-save t)
      ruby
      rust
      sql
