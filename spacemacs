@@ -77,7 +77,7 @@ This function should only modify configuration layer settings."
      markdown
      (python :variables
              python-backend 'lsp
-             python-formatter 'lsp
+             python-formatter 'black
              python-format-on-save t)
      ruby
      rust
