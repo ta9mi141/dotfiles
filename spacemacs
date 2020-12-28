@@ -67,7 +67,8 @@ This function should only modify configuration layer settings."
          go-backend 'lsp
          go-tab-width 4
          go-format-before-save t
-         gofmt-command "goimports")
+         gofmt-command "goimports"
+         go-use-golangci-lint t)
      html
      (java :variables
            java-backend 'lsp)
