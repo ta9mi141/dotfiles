@@ -69,6 +69,8 @@ This function should only modify configuration layer settings."
          go-format-before-save t
          gofmt-command "goimports"
          go-use-golangci-lint t)
+     (haskell :variables
+              haskell-completion-backend 'hls)
      html
      (java :variables
            java-backend 'lsp)
