@@ -7,6 +7,3 @@
     editor = vim
 [pull]
     rebase = false
-[alias]
-    s = status
-    d = diff
