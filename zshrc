@@ -26,15 +26,6 @@ setopt hist_ignore_dups
 setopt inc_append_history
 setopt share_history # Share history with other terminals
 
-function peco-history-incremental-search {
-    BUFFER=`history -nr 1 | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle accept-line
-    zle redisplay
-}
-zle -N peco-history-incremental-search
-bindkey -M viins '^R' peco-history-incremental-search
-
 ##############################
 # Prompt
 ##############################
@@ -74,10 +65,21 @@ setopt auto_pushd # Use directory stack
 setopt pushd_ignore_dups
 
 ##############################
-# Others
+# Distro-specific Settings
 ##############################
 
-# Print basic system information
 if [ -e /etc/arch-release ]; then
-    archey3
+    archey3 # Print basic system information
+
+    # Settings of fzf
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+
+    fzf-history-widget-accept() {
+      fzf-history-widget
+      zle accept-line
+      zle redisplay
+    }
+    zle -N fzf-history-widget-accept
+    bindkey -M viins '^R' fzf-history-widget-accept
 fi
