@@ -19,9 +19,9 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
 
   # Vi mode cursor colors
   #
@@ -29,9 +29,9 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #vi_mode_cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
 
   # Selection colors
   #
@@ -49,14 +49,14 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #search:
-  #  matches:
-  #    foreground: '#000000'
-  #    background: '#ffffff'
-  #
-  #  bar:
-  #    background: CellForeground
-  #    foreground: CellBackground
+  search:
+    matches:
+      foreground: '#44475a'
+      background: '#50fa7b'
+
+    bar:
+      background: '#282a36'
+      foreground: '#f8f8f2'
 
   # Normal colors
   normal:
@@ -64,35 +64,35 @@ colors:
     red:     '#ff5555'
     green:   '#50fa7b'
     yellow:  '#f1fa8c'
-    blue:    '#caa9fa'
+    blue:    '#bd93f9'
     magenta: '#ff79c6'
     cyan:    '#8be9fd'
     white:   '#bfbfbf'
 
   # Bright colors
   bright:
-    black:   '#575b70' # black
-    red:     '#ff6e67' # tomato
-    green:   '#5af78e' # yellowgreen
-    yellow:  '#f4f99d' # goldenrod
-    blue:    '#caa9fa' # lightskyblue
-    magenta: '#ff92d0' # violet
-    cyan:    '#9aedfe' # mediumturquoise
-    white:   '#e6e6e6' # lightgray
+    black:   '#4d4d4d'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  #dim:
-  #  black:   '#131415'
-  #  red:     '#864343'
-  #  green:   '#777c44'
-  #  yellow:  '#9e824c'
-  #  blue:    '#556a7d'
-  #  magenta: '#75617b'
-  #  cyan:    '#5b7d78'
-  #  white:   '#828482'
+  dim:
+    black:   '#14151b'
+    red:     '#ff2222'
+    green:   '#1ef956'
+    yellow:  '#ebf85b'
+    blue:    '#4d5b86'
+    magenta: '#ff46b0'
+    cyan:    '#59dffc'
+    white:   '#e6e6d1'
 
   # Indexed Colors
   #
