@@ -2,8 +2,8 @@
 colors:
   # Default colors
   primary:
-    background: '#000000' # black
-    foreground: '#d3d3d3' # lightgray
+    background: '#1c1c1c'
+    foreground: '#bfbfbf'
 
     # Bright and dim foreground colors
     #
@@ -60,25 +60,27 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#000000' # black
-    red:     '#ff4500' # orangered
-    green:   '#32cd32' # limegreen
-    yellow:  '#ffd700' # gold
-    blue:    '#87c3fa' # lightskyblue
-    magenta: '#ee82ee' # violet
-    cyan:    '#40e0d0' # turquoise
-    white:   '#d3d3d3' # lightgray
+    black:   '#0d0015'
+    white:   '#c9c9c9'
+    # Saturation 50 ~ 70, Brightness 70 ~ 80
+    red:     '#cc5745' # S66 B80
+    green:   '#4aba77' # S60 B72
+    yellow:  '#c6b44b' # S62 B77
+    blue:    '#4071bc' # S65 B73
+    magenta: '#c15eb2' # S51 B75
+    cyan:    '#59b9c6' # S55 B77
 
   # Bright colors
   bright:
-    black:   '#000000' # black
-    red:     '#ff6347' # tomato
-    green:   '#9acd32' # yellowgreen
-    yellow:  '#daa520' # goldenrod
-    blue:    '#87c3fa' # lightskyblue
-    magenta: '#ee82ee' # violet
-    cyan:    '#48d1cc' # mediumturquoise
-    white:   '#d3d3d3' # lightgray
+    black:   '#0d0015'
+    white:   '#c9c9c9'
+    # Saturation 40 ~ 60, Brightness 60 ~ 70
+    red:     '#b24a5a' # S58 B69
+    green:   '#acb54d' # S57 B70
+    yellow:  '#a88a43' # S60 B65
+    blue:    '#5f92ad' # S45 B67
+    magenta: '#b26598' # S43 B69
+    cyan:    '#46a5aa' # S58 B66
 
   # Dim colors
   #
