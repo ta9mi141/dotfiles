@@ -1,2 +1,4 @@
 .netrwhist
 config/systemd/user/default.target.wants/
+config/alacritty/dracula.yml
+config/alacritty/nord.yml
