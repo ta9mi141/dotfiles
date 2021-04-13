@@ -10,9 +10,7 @@ typeset -U PATH
 export EDITOR="vim"
 export GOPATH="$HOME/works/go"
 export PATH="$HOME/.local/bin:$GOPATH/bin:$(ruby -e 'print Gem.user_dir')/bin:/usr/bin/core_perl/:$PATH"
-export FZF_DEFAULT_OPTS='--color fg:-1,bg:-1,hl:#d66a3b,fg+:#c0c0c0,bg+:#212222,hl+:#cc578d,info:#aaba41,prompt:#5faf73,pointer:#5faf73 --no-height --reverse' # Nippon
-# export FZF_DEFAULT_OPTS='--color fg:#d8dee9,bg:#2e3440,hl:#a3be8c,fg+:#d8dee9,bg+:#434c5e,hl+:#a3be8c,pointer:#bf616a,info:#4c566a,spinner:#4c566a,header:#4c566a,prompt:#81a1c1,marker:#ebcb8b --no-height --reverse' # Nord
-# export FZF_DEFAULT_OPTS='--color=dark --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7 --no-height --reverse' # Dracula
+export FZF_DEFAULT_OPTS='--color=dark --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7 --no-height --reverse' # Dracula
 
 systemctl --user import-environment GOPATH
 systemctl --user import-environment PATH
