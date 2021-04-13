@@ -88,7 +88,7 @@ colors:
     # black:   '#000000'
     # white:   '#ffffff'
     # Saturation 35 ~ 65, Brightness 55 ~ 75
-    red:     '#c15164' # S 58, B 75
+    red:     '#c14d47' # S 63, B 75
     green:   '#aaba41' # S 65, B 72
     yellow:  '#b78f40' # S 65, B 71
     blue:    '#769ebc' # S 37, B 73
