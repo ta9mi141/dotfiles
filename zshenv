@@ -12,5 +12,7 @@ export GOPATH="$HOME/works/go"
 export PATH="$HOME/.local/bin:$GOPATH/bin:$(ruby -e 'print Gem.user_dir')/bin:/usr/bin/core_perl/:$PATH"
 export FZF_DEFAULT_OPTS='--color=dark --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7 --no-height --reverse' # Dracula
 
-systemctl --user import-environment GOPATH
-systemctl --user import-environment PATH
+if type systemctl > /dev/null 2>&1; then
+    systemctl --user import-environment GOPATH
+    systemctl --user import-environment PATH
+fi

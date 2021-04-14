@@ -68,13 +68,7 @@ setopt pushd_ignore_dups
 # Distro-specific Settings
 ##############################
 
-if [ -e /etc/arch-release ]; then
-    archey3 # Print basic system information
-
-    # Settings of fzf
-    source /usr/share/fzf/key-bindings.zsh
-    source /usr/share/fzf/completion.zsh
-
+bind-fzf-history-widget-accept() {
     fzf-history-widget-accept() {
       fzf-history-widget
       zle accept-line
@@ -82,4 +76,23 @@ if [ -e /etc/arch-release ]; then
     }
     zle -N fzf-history-widget-accept
     bindkey -M viins '^R' fzf-history-widget-accept
+}
+
+# Arch Linux
+if [ -e /etc/arch-release ]; then
+    archey3 # Print basic system information
+
+    # Settings of fzf
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+    bind-fzf-history-widget-accept
+fi
+
+# Darwin
+if [ $(uname -s) = "Darwin" ]; then
+    alias ls='ls -G'
+
+    # Settings of fzf
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    bind-fzf-history-widget-accept
 fi
