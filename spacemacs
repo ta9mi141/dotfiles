@@ -538,6 +538,12 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; mozc
+  (set-language-environment "Japanese")
+  (require 'mozc)
+  (setq default-input-method "japanese-mozc")
+  (global-set-key (kbd "s-;") 'toggle-input-method)
+
   (set-face-background 'hl-line "#2b2b2b")
   (set-face-attribute 'fixed-pitch nil :family "Ricty")
 

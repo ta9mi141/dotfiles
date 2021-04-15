@@ -178,6 +178,6 @@ bar {
 }
 
 ### Other configurations
-exec fcitx-autostart
+exec fcitx5
 
 include /etc/sway/config.d/*
