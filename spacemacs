@@ -111,7 +111,6 @@ This function should only modify configuration layer settings."
 
      ;; tools
      (lsp :variables
-          lsp-terraform-server '("terraform-ls" "serve")
           lsp-ui-doc-position 'top)
      (shell :variables
             shell-default-height 30
@@ -119,7 +118,8 @@ This function should only modify configuration layer settings."
             shell-default-term-shell "/bin/zsh")
      (terraform :variables
                 terraform-auto-format-on-save t
-                terraform-backend 'lsp)
+                terraform-backend 'lsp
+                lsp-terraform-server '("terraform-ls" "serve"))
 
      ;; vim
 
@@ -276,7 +276,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font or prioritized list of fonts.
    dotspacemacs-default-font '("Ricty"
-                               :size 18
+                               :size 22
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
