@@ -47,6 +47,7 @@ alias e='emacsclient -c'
 alias en='emacsclient -nw'
 alias ekill='emacsclient -e "(kill-emacs)"'
 alias clear='clear -x'
+alias c='code'
 
 ##############################
 # Completion
