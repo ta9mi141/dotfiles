@@ -50,6 +50,8 @@ This function should only modify configuration layer settings."
      ;; distributions
 
      ;; emacs
+     (org)
+     (semantic)
 
      ;; email
 
@@ -67,6 +69,7 @@ This function should only modify configuration layer settings."
      ;; intl
 
      ;; lang
+     (emacs-lisp)
 
      ;; misc
 
