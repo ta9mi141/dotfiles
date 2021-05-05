@@ -36,12 +36,16 @@ This function should only modify configuration layer settings."
      ;; chat
 
      ;; checkers
-     (syntax-checking :variables
-                      syntax-checking-enable-tooltips t
-                      syntax-checking-enable-by-default t
-                      syntax-checking-auto-hide-tooltips nil)
+     (syntax-checking)
 
      ;; completion
+     (auto-completion :variables
+                      auto-completion-idle-delay 0.0
+                      auto-completion-minimum-prefix-length 1
+                      auto-completion-enable-help-tooltip t)
+     (ivy :variables
+          ivy-wrap t
+          ivy-enable-advanced-buffer-information t)
 
      ;; distributions
 
