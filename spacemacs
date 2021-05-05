@@ -79,6 +79,10 @@ This function should only modify configuration layer settings."
      ;; readers
 
      ;; source-control
+     (git :variables
+          git-enable-magit-delta-plugin t
+          git-enable-magit-todos-plugin t
+          global-git-commit-mode t)
 
      ;; spacemacs
 
