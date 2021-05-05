@@ -54,6 +54,9 @@ This function should only modify configuration layer settings."
      ;; email
 
      ;; filetree
+     (treemacs :variables
+               treemacs-git-mode 'deferred
+               treemacs-width 25)
 
      ;; fonts
 
