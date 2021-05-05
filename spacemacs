@@ -36,6 +36,10 @@ This function should only modify configuration layer settings."
      ;; chat
 
      ;; checkers
+     (syntax-checking :variables
+                      syntax-checking-enable-tooltips t
+                      syntax-checking-enable-by-default t
+                      syntax-checking-auto-hide-tooltips nil)
 
      ;; completion
 
