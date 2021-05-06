@@ -94,6 +94,8 @@ This function should only modify configuration layer settings."
      ;; themes
 
      ;; tools
+     (dap)
+     (lsp)
 
      ;; vim
 
