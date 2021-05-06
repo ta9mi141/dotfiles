@@ -70,6 +70,8 @@ This function should only modify configuration layer settings."
 
      ;; lang
      (emacs-lisp)
+     (yaml :variables
+           yaml-enable-lsp t)
 
      ;; misc
 
@@ -96,6 +98,9 @@ This function should only modify configuration layer settings."
      ;; tools
      (dap)
      (lsp)
+     (terraform :variables
+                terraform-auto-format-on-save t
+                lsp-terraform-server '("terraform-ls" "serve"))
 
      ;; vim
 
