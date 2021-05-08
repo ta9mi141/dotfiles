@@ -70,6 +70,7 @@ This function should only modify configuration layer settings."
 
      ;; lang
      (emacs-lisp)
+     (haskell)
      (yaml :variables
            yaml-enable-lsp t)
 
