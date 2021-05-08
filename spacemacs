@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      ;; filetree
      (treemacs :variables
                treemacs-git-mode 'deferred
-               treemacs-width 25)
+               treemacs-width 35)
 
      ;; fonts
 
