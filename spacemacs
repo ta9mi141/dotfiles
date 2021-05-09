@@ -102,6 +102,9 @@ This function should only modify configuration layer settings."
      (terraform :variables
                 terraform-auto-format-on-save t
                 lsp-terraform-server '("terraform-ls" "serve"))
+     (xclipboard :variables
+                 xclipboard-copy-command "wl-copy"
+                 xclipboard-paste-command "wl-paste")
 
      ;; vim
 
