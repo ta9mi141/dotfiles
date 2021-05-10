@@ -71,6 +71,9 @@ This function should only modify configuration layer settings."
      ;; lang
      (emacs-lisp)
      (haskell)
+     (markdown :variables
+               markdown-command "markdown"
+               markdown-live-preview-engine 'vmd)
      (yaml :variables
            yaml-enable-lsp t)
 
