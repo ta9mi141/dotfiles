@@ -101,6 +101,9 @@ This function should only modify configuration layer settings."
 
      ;; tools
      (dap)
+     (docker :variables
+             docker-dockerfile-backend 'lsp)
+     (kubernetes)
      (lsp)
      (terraform :variables
                 terraform-auto-format-on-save t
