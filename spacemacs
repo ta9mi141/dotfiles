@@ -70,6 +70,11 @@ This function should only modify configuration layer settings."
 
      ;; lang
      (emacs-lisp)
+     (go :variables
+         go-tab-width 4
+         go-format-before-save t
+         gofmt-command "goimports"
+         go-use-golangci-lint t)
      (haskell)
      (markdown :variables
                markdown-command "markdown"
