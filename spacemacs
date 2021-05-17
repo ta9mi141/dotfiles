@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
          gofmt-command "goimports"
          go-use-golangci-lint t)
      (haskell)
+     (latex)
      (markdown :variables
                markdown-command "markdown"
                markdown-live-preview-engine 'vmd)
