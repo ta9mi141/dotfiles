@@ -71,6 +71,11 @@ This function should only modify configuration layer settings."
      ;; intl
 
      ;; lang
+     (c-c++ :variables
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-enable-semantic-highlight t
+            c-c++-enable-organize-includes-on-save t
+            c-c++-enable-clang-format-on-save t)
      (emacs-lisp)
      (go :variables
          go-tab-width 4
