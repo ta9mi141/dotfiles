@@ -76,6 +76,14 @@ This function should only modify configuration layer settings."
          gofmt-command "goimports"
          go-use-golangci-lint t)
      (haskell)
+     (javascript :variables
+                 js2-mode-show-strict-warnings nil
+                 javascript-import-tool 'import-js
+                 javascript-fmt-tool 'prettier
+                 javascript-fmt-on-save t
+                 javascript-lsp-linter nil
+                 js2-basic-offset 2
+                 js-indent-level 2)
      (latex)
      (markdown :variables
                markdown-command "markdown"
@@ -109,8 +117,10 @@ This function should only modify configuration layer settings."
      (dap)
      (docker :variables
              docker-dockerfile-backend 'lsp)
+     (import-js)
      (kubernetes)
      (lsp)
+     (prettier)
      (terraform :variables
                 terraform-auto-format-on-save t
                 lsp-terraform-server '("terraform-ls" "serve"))
