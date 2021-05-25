@@ -63,6 +63,8 @@ This function should only modify configuration layer settings."
      ;; fonts
 
      ;; frameworks
+     (vue :variables
+          vue-backend 'lsp)
 
      ;; fun
 
