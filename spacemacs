@@ -76,6 +76,12 @@ This function should only modify configuration layer settings."
          gofmt-command "goimports"
          go-use-golangci-lint t)
      (haskell)
+     (html :variables
+           css-enable-lsp t
+           less-enable-lsp t
+           scss-enable-lsp t
+           html-enable-lsp t
+           web-fmt-tool 'prettier)
      (javascript :variables
                  js2-mode-show-strict-warnings nil
                  javascript-import-tool 'import-js
@@ -88,6 +94,11 @@ This function should only modify configuration layer settings."
      (markdown :variables
                markdown-command "markdown"
                markdown-live-preview-engine 'vmd)
+     (typescript :variables
+                 typescript-fmt-on-save t
+                 typescript-fmt-tool 'prettier
+                 typescript-linter 'eslint
+                 typescript-lsp-linter nil)
      (yaml :variables
            yaml-enable-lsp t)
 
