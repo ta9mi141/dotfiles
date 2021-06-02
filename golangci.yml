@@ -1,0 +1,23 @@
+linters:
+  disable-all: true
+  enable:
+    - goimports
+    - gosimple
+    - govet
+    - staticcheck
+    - stylecheck
+    - unused
+  fast: false
+
+go-version: &go-version
+  go: "1.16"
+
+linters-settings:
+  gosimple:
+    <<: *go-version
+  staticcheck:
+    <<: *go-version
+  stylecheck:
+    <<: *go-version
+  unused:
+    <<: *go-version
