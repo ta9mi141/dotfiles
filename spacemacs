@@ -101,6 +101,10 @@ This function should only modify configuration layer settings."
      (markdown :variables
                markdown-command "markdown"
                markdown-live-preview-engine 'vmd)
+     (python :variables
+             python-formatter 'black
+             python-format-on-save t
+             python-sort-imports-on-save t)
      (typescript :variables
                  typescript-fmt-on-save t
                  typescript-fmt-tool 'prettier
