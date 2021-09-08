@@ -96,4 +96,8 @@ if [ $(uname -s) = "Darwin" ]; then
     # Settings of fzf
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     bind-fzf-history-widget-accept
+
+    # Settings of google-cloud-sdk
+    source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc # Enable shell command completion for gcloud
+    source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc # Add the Google Cloud SDK command line tools to $PATH
 fi
