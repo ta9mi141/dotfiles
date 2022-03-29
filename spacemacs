@@ -142,6 +142,7 @@ This function should only modify configuration layer settings."
      (import-js)
      (kubernetes)
      (lsp)
+     (nginx)
      (prettier)
      (terraform :variables
                 terraform-auto-format-on-save t
