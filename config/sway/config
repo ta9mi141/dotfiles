@@ -1,4 +1,4 @@
-# ta9mi1shi1's config for sway
+# ta9mi141's config for sway
 #
 # Read `man 5 sway` for a complete reference.
 
@@ -14,7 +14,7 @@ set $right l
 
 set $term /usr/bin/alacritty
 set $launcher /usr/bin/rofi -show run
-set $wallpaper /home/ta9mi1shi1/Desktop/images/archlinux_leopard_1920x1080.jpg
+set $wallpaper /home/ta9mi141/Desktop/images/archlinux_leopard_1920x1080.jpg
 set $screenlock /usr/bin/swaylock -f -i $wallpaper
 
 ### Output configuration
