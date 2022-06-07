@@ -98,6 +98,7 @@ This function should only modify configuration layer settings."
                  javascript-lsp-linter nil
                  js2-basic-offset 2
                  js-indent-level 2)
+     (json)
      (latex)
      (markdown :variables
                markdown-command "markdown"
