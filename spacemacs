@@ -89,6 +89,7 @@ This function should only modify configuration layer settings."
            scss-enable-lsp t
            html-enable-lsp t
            web-fmt-tool 'prettier)
+     (java)
      (javascript :variables
                  js2-mode-show-strict-warnings nil
                  javascript-import-tool 'import-js
