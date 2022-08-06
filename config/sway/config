@@ -156,6 +156,13 @@ exec swayidle -w \
     set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
     exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
+    # Volume
+    bindsym --locked F1 exec amixer set Master toggle | \
+            sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
+    bindsym --locked F2 exec amixer set Master 5%- | \
+            sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
+    bindsym --locked F3 exec amixer set Master 5%+ | \
+            sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
     # Brightness
     bindsym --locked F5 exec brightnessctl set 5%- | \
             sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
