@@ -21,6 +21,11 @@ set $screenlock /usr/bin/swaylock -f -i $wallpaper
 output * bg $wallpaper fill
 output HDMI-A-1 transform 270
 
+### Input configuration
+input "type:keyboard" {
+    xkb_options ctrl:nocaps
+}
+
 ### Idle configuration
 exec swayidle -w \
          timeout 300 '$screenlock' \
