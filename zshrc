@@ -81,7 +81,7 @@ bind-fzf-history-widget-accept() {
 
 # Arch Linux
 if [ -e /etc/arch-release ]; then
-    archey3 # Print basic system information
+    neofetch # Print basic system information
 
     # Settings of fzf
     source /usr/share/fzf/key-bindings.zsh
