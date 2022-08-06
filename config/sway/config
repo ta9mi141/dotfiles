@@ -14,7 +14,7 @@ set $right l
 
 set $term /usr/bin/alacritty
 set $launcher /usr/bin/rofi -show run
-set $wallpaper /home/ta9mi141/Desktop/images/archlinux_leopard_1920x1080.jpg
+set $wallpaper /home/ta9mi141/images/archlinux_1920x1200.jpg
 set $screenlock /usr/bin/swaylock -f -i $wallpaper
 
 ### Output configuration
