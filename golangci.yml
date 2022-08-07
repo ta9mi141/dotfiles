@@ -10,7 +10,7 @@ linters:
   fast: false
 
 go-version: &go-version
-  go: "1.18"
+  go: "1.19"
 
 linters-settings:
   gosimple:
