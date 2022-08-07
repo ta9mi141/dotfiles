@@ -203,5 +203,6 @@ bar {
 
 ### Other configurations
 exec fcitx5
+exec --no-startup-id 'nm-applet --indicator'
 
 include /etc/sway/config.d/*
