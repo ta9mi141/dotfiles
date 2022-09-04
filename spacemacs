@@ -100,6 +100,11 @@ This function should only modify configuration layer settings."
                  js-indent-level 2)
      (json)
      (latex)
+     (lua :variables
+          lua-backend 'lsp
+          lua-lsp-server 'lua-language-server
+          lsp-clients-lua-language-server-bin "/usr/lib/lua-language-server/bin/lua-language-server"
+          lsp-clients-lua-language-server-main-location "/usr/lib/lua-language-server/main.lua")
      (markdown :variables
                markdown-command "markdown"
                markdown-live-preview-engine 'vmd)
