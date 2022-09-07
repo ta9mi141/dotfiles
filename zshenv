@@ -14,6 +14,11 @@ export FZF_DEFAULT_OPTS="--color=dark --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:
 # export FZF_DEFAULT_OPTS="--color fg:#d8dee9,bg:#2e3440,hl:#a3be8c,fg+:#d8dee9,bg+:#434c5e,hl+:#a3be8c --color pointer:#bf616a,info:#4c566a,spinner:#4c566a,header:#4c566a,prompt:#81a1c1,marker:#ebcb8b --no-height --reverse" # Nord
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:5:border-sharp:wrap"
 
+# Fcitx5
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+
 if type systemctl > /dev/null 2>&1; then
     systemctl --user import-environment GOPATH
     systemctl --user import-environment PATH
