@@ -19,7 +19,7 @@ set $screenlock /usr/bin/swaylock -f -i $wallpaper
 
 ### Output configuration
 output * bg $wallpaper fill
-output HDMI-A-1 transform normal
+output HDMI-A-1 mode 2560x1440
 
 ### Input configuration
 input "type:keyboard" {
