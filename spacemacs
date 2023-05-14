@@ -175,7 +175,14 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(mozc)
+   dotspacemacs-additional-packages
+   '(
+     (mozc)
+     (copilot :location (recipe
+                         :fetcher github
+                         :repo "zerolfx/copilot.el"
+                         :files ("*.el" "dist")))
+     )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -677,7 +684,20 @@ before packages are loaded."
   (require 'mozc)
   (set-language-environment "Japanese")
   (setq default-input-method "japanese-mozc")
-  (global-set-key (kbd "s-;") 'toggle-input-method))
+  (global-set-key (kbd "s-;") 'toggle-input-method)
+
+  ;; GitHub Copilot
+  (with-eval-after-load 'company
+    ;; disable inline previews
+    (delq 'company-preview-if-just-one-frontend company-frontends))
+  (with-eval-after-load 'copilot
+    (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+    (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+    (define-key copilot-completion-map (kbd "C-<tab>") 'copilot-accept-completion-by-word)
+    (define-key copilot-completion-map (kbd "C-TAB") 'copilot-accept-completion-by-word))
+  (add-hook 'prog-mode-hook 'copilot-mode)
+
+  )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
