@@ -112,6 +112,8 @@ This function should only modify configuration layer settings."
              python-formatter 'black
              python-format-on-save t
              python-sort-imports-on-save t)
+     (rust :variables
+           rustic-format-on-save t)
      (typescript :variables
                  typescript-fmt-on-save t
                  typescript-fmt-tool 'prettier
@@ -148,7 +150,8 @@ This function should only modify configuration layer settings."
              docker-dockerfile-backend 'lsp)
      (import-js)
      (kubernetes)
-     (lsp)
+     (lsp :variables
+          cargo-process-reload-on-modify t)
      (nginx)
      (prettier)
      (terraform :variables
