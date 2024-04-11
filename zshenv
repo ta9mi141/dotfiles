@@ -17,8 +17,3 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:5:border-sharp
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
-
-if type systemctl > /dev/null 2>&1; then
-    systemctl --user import-environment GOPATH
-    systemctl --user import-environment PATH
-fi
