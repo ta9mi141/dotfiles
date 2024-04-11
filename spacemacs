@@ -101,7 +101,6 @@ This function should only modify configuration layer settings."
      (json)
      (latex)
      (lua :variables
-          lua-backend 'lsp
           lua-lsp-server 'lua-language-server
           lsp-clients-lua-language-server-bin "/usr/lib/lua-language-server/bin/lua-language-server"
           lsp-clients-lua-language-server-main-location "/usr/lib/lua-language-server/main.lua")
@@ -698,8 +697,7 @@ before packages are loaded."
     (define-key copilot-completion-map (kbd "C-<tab>") 'copilot-accept-completion-by-word)
     (define-key copilot-completion-map (kbd "C-TAB") 'copilot-accept-completion-by-word))
   (add-hook 'prog-mode-hook 'copilot-mode)
-
-  )
+)
 
 
 ;; Do not write anything past this comment. This is where Emacs will
