@@ -116,8 +116,7 @@ This function should only modify configuration layer settings."
      (typescript :variables
                  typescript-fmt-on-save t
                  typescript-fmt-tool 'prettier
-                 typescript-linter 'eslint
-                 typescript-lsp-linter nil)
+                 typescript-linter 'eslint)
      (yaml :variables
            yaml-enable-lsp t)
 
