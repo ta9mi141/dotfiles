@@ -183,6 +183,10 @@ This function should only modify configuration layer settings."
                          :fetcher github
                          :repo "zerolfx/copilot.el"
                          :files ("*.el" "dist")))
+     (google-java-format :location (recipe
+                                    :fetcher github
+                                    :repo "google/google-java-format"
+                                    :files ("core/src/main/scripts/*.el")))
      )
 
    ;; A list of packages that cannot be updated.
