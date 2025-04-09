@@ -163,6 +163,7 @@ This function should only modify configuration layer settings."
      ;; vim
 
      ;; web-services
+     (github-copilot)
 
      ;; web
 
@@ -180,10 +181,6 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(
      (mozc)
-     (copilot :location (recipe
-                         :fetcher github
-                         :repo "zerolfx/copilot.el"
-                         :files ("*.el" "dist")))
      (google-java-format :location (recipe
                                     :fetcher github
                                     :repo "google/google-java-format"
@@ -690,15 +687,6 @@ before packages are loaded."
   (set-language-environment "Japanese")
   (setq default-input-method "japanese-mozc")
   (global-set-key (kbd "s-;") 'toggle-input-method)
-
-  ;; GitHub Copilot
-  (with-eval-after-load 'company
-    ;; disable inline previews
-    (delq 'company-preview-if-just-one-frontend company-frontends))
-  (with-eval-after-load 'copilot
-    (define-key copilot-completion-map (kbd "C-<tab>") 'copilot-accept-completion)
-    (define-key copilot-completion-map (kbd "C-TAB") 'copilot-accept-completion))
-  (add-hook 'prog-mode-hook 'copilot-mode)
   )
 
 
