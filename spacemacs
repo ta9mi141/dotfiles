@@ -90,7 +90,7 @@ This function should only modify configuration layer settings."
            html-enable-lsp t
            web-fmt-tool 'prettier)
      (java :variables
-           lsp-java-jdt-download-url "https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.44.0/jdt-language-server-1.44.0-202501221502.tar.gz")
+           lsp-java-jdt-download-url "https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.47.0/jdt-language-server-1.47.0-202505151856.tar.gz")
      (javascript :variables
                  js2-mode-show-strict-warnings nil
                  javascript-import-tool 'import-js
