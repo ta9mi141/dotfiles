@@ -82,6 +82,9 @@ This function should only modify configuration layer settings."
          go-format-before-save t
          gofmt-command "goimports"
          go-use-golangci-lint t)
+     (groovy :variables
+             groovy-backend 'lsp
+             groovy-lsp-jar-path "/usr/share/java/groovy-language-server/groovy-language-server-all.jar")
      (haskell)
      (html :variables
            css-enable-lsp t
