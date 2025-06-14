@@ -690,6 +690,11 @@ before packages are loaded."
   (set-language-environment "Japanese")
   (setq default-input-method "japanese-mozc")
   (global-set-key (kbd "s-;") 'toggle-input-method)
+
+  ;; Java
+  (add-hook 'java-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'google-java-format-buffer)))
   )
 
 
