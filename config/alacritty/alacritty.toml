@@ -15,11 +15,11 @@ multiplier = 30
 size = 16.0
 
 [font.normal]
-family = "Moralerspace Neon HWNF"
+family = "Moralerspace Neon HW"
 style = "Regular"
 
 [font.bold]
-family = "Moralerspace Neon HWNF"
+family = "Moralerspace Neon HW"
 style = "Bold"
 
 [colors]
